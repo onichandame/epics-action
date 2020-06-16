@@ -1616,6 +1616,7 @@ const exec_1 = __webpack_require__(986);
         if ((yield exec_1.exec("sudo", [
             "docker",
             "run",
+            "-dit",
             "-p",
             "5064:5064",
             "onichandame/epics:example",
