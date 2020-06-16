@@ -1621,6 +1621,7 @@ const exec_1 = __webpack_require__(986);
             "onichandame/epics:example",
         ])) !== 0)
             throw new Error(`failed to start container`);
+        core_1.info("example IOC started");
     }
     catch (e) {
         core_1.error(`failed to start IOC due to ${JSON.stringify(e.message || e)}`);
