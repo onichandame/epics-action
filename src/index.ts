@@ -7,6 +7,7 @@ import { exec } from "@actions/exec"
       (await exec("sudo", [
         "docker",
         "run",
+        "-dit",
         "-p",
         "5064:5064",
         "onichandame/epics:example",
