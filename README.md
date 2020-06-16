@@ -1,18 +1,24 @@
-# Github Actions
+# EPICS Actions
 
-A template for making new github actions.
+Start an example EPICS IOC server.
 
 # Author
 
 [onichandame](https://onichandame.com)
 
-# Features
+# Usage
 
-- TypeScript
-- JavaScript action
-- yarn
-- Webpack bundling with minimal configuration
+```yaml
+name: Test
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
 
-# Caveat
+    steps:
+      - name: Create EPICS IOC Server
+        uses: onichandame/epics-action@master # root:aiExample for read-only auto-changing and root:aoExample for read-write integer between 0-9
 
-1. Github action engine only understands pure JavaScript and does not allow compilation before running the task. Therefore the bundled script in dist directory must be included in the repo.
+      - name: test your code here
+```
